@@ -20,12 +20,15 @@ requirements:
     - pip
   run:
     - python
+    - pip
     - globus-sdk >=1.0.0
     - six >=1.10.0
 
 test:
   imports:
     - globus_nexus_client
+  commands:
+    - pip check
 
 about:
   home: https://github.com/sirosen/globus-nexus-client
