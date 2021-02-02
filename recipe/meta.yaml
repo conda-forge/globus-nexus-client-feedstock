@@ -1,5 +1,5 @@
 {% set name = "globus-nexus-client" %}
-{% set version = "0.2.9" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 10c0abca8f8da6f0799051fef3f7dbd8a38a6b28231663014f6843ac39f9a6fd
+  sha256: fabe10bfb0b5154e973436cc0e4473108b32835999512c5f20306635a8d87c19
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -35,7 +35,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'NexusClient object similar to Globus SDK objects'
+  summary: NexusClient object similar to Globus SDK objects
 
   description: |
     This is a personal project for talking to the Globus Nexus API with 
