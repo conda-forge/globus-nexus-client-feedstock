@@ -5,9 +5,13 @@ Home: https://github.com/sirosen/globus-nexus-client
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/globus-nexus-client-feedstock/blob/master/LICENSE.txt)
 
 Summary: NexusClient object similar to Globus SDK objects
+
+Development: https://github.com/sirosen/globus-nexus-client
+
+Documentation: https://github.com/sirosen/globus-nexus-client
 
 This is a personal project for talking to the Globus Nexus API with
 all of the benefits of the Globus SDK. It is not a Globus maintained
