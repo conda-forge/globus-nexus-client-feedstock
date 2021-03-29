@@ -11,17 +11,16 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
-    - pip
-    - globus-sdk >=1.0.0
+    - python >=3.6
+    - globus-sdk <3.0.0,>=2.0.1
     - six >=1.10.0
 
 test:
@@ -29,6 +28,8 @@ test:
     - globus_nexus_client
   commands:
     - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/sirosen/globus-nexus-client
