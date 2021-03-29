@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -21,7 +21,7 @@ requirements:
   run:
     - python
     - pip
-    - globus-sdk >=1.0.0
+    - globus-sdk <3.0.0,>=2.0.1
     - six >=1.10.0
 
 test:
