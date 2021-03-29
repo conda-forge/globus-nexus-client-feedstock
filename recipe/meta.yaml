@@ -20,7 +20,6 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - pip
     - globus-sdk <3.0.0,>=2.0.1
     - six >=1.10.0
 
@@ -29,6 +28,8 @@ test:
     - globus_nexus_client
   commands:
     - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/sirosen/globus-nexus-client
