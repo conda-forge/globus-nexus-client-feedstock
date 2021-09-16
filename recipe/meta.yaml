@@ -1,5 +1,5 @@
 {% set name = "globus-nexus-client" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fabe10bfb0b5154e973436cc0e4473108b32835999512c5f20306635a8d87c19
+  sha256: 3406437c3dc73446ef945dc22427f555eff03af3e302e013ee1f893e764ed737
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,7 +20,7 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - globus-sdk <3.0.0,>=2.0.1
+    - globus-sdk <4.0.0,>=3.0.0
     - six >=1.10.0
 
 test:
