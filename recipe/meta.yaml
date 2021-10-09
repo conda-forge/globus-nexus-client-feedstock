@@ -1,5 +1,5 @@
 {% set name = "globus-nexus-client" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3406437c3dc73446ef945dc22427f555eff03af3e302e013ee1f893e764ed737
+  sha256: 156ff3a3dc5e07fe30b41856aad54d25129efcff913ec17669edc24c9fa755cd
 
 build:
   noarch: python
