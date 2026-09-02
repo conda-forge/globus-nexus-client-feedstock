@@ -1,0 +1,54 @@
+schema_version: 1
+
+context:
+  name: globus-nexus-client
+  version: 0.4.1
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 156ff3a3dc5e07fe30b41856aad54d25129efcff913ec17669edc24c9fa755cd
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - globus-sdk <4.0.0,>=3.0.0
+    - six >=1.10.0
+
+tests:
+  - python:
+      imports:
+        - globus_nexus_client
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE
+  summary: NexusClient object similar to Globus SDK objects
+  description: |
+    This is a personal project for talking to the Globus Nexus API with
+    all of the benefits of the Globus SDK. It is not a Globus maintained
+    product.
+  homepage: https://github.com/sirosen/globus-nexus-client
+  repository: https://github.com/sirosen/globus-nexus-client
+  documentation: https://github.com/sirosen/globus-nexus-client
+
+extra:
+  recipe-maintainers:
+    - WardLT
+    - jan-janssen
